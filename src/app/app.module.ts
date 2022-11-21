@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { ProgresBarComponent } from './progres-bar/progres-bar.component';
 import { CountdonComponent } from './countdon/countdon.component';
 import{ FormsModule } from '@angular/forms';
+import { ListaPaisesComponent } from './lista-paises/lista-paises.component';
+import { PrintPaisComponent } from './print-pais/print-pais.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProgresBarComponent,
-    CountdonComponent
+    CountdonComponent,
+    ListaPaisesComponent,
+    PrintPaisComponent
   ],
   imports: [
     BrowserModule,
