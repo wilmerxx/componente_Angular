@@ -1,0 +1,7 @@
+<h1>
+    <app-progres-bar [progress]="counterProgress"></app-progres-bar>
+    <app-countdon #countdown [init]="totalCountdown" (onDrecrease)="updateProgress($event)" (onComplete)="countdownFinished()"></app-countdon>
+
+    <button (click)="countdown.startCountdown(); counterProgress = 0">Reiniciar</button>
+
+</h1>
