@@ -1,12 +1,12 @@
-import { outputAst } from '@angular/compiler';
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-countdon',
   templateUrl: './countdon.component.html',
   styleUrls: ['./countdon.component.scss']
 })
-export class CountdonComponent implements OnInit {
+export class CountdonComponent implements OnInit,  OnDestroy, OnChanges{
   @Output() onDrecrease = new EventEmitter<number>();
   @Output() onComplete = new EventEmitter<void>();
 
@@ -15,6 +15,13 @@ export class CountdonComponent implements OnInit {
   private countdownTimerRef: any = null;
 
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log("Valor de init cambio a: ", changes['init'].currentValue);
+    this.clearTimeoutRef();
+  }
+  ngOnDestroy(): void {
+    this.clearTimeoutRef();
+  }
 
   ngOnInit(): void {
     this.startCountdown();

@@ -5,3 +5,15 @@ app-progres-bar{
 button{
     width: 100%;
 }
+
+
+.initInput{
+    display: flex;
+    input{
+        margin-left: 20px;
+        height: 40px;
+        font-size: 20px;
+        flex: 1;
+        min-width: 50px;
+    }
+}
