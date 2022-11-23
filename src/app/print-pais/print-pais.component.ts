@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-print-pais',
@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./print-pais.component.scss']
 })
 export class PrintPaisComponent implements OnInit {
-
+ @Input() print:string = "";
   constructor() { }
 
   ngOnInit(): void {

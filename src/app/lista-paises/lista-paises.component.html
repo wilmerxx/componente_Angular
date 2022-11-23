@@ -1,1 +1,5 @@
-<p>lista-paises works!</p>
+<select [(ngModel)]="selectedObject">
+    <option *ngFor="let show of ListaPaises" [ngValue]="show">
+    {{show.name}}
+    </option>
+</select>
