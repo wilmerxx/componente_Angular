@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
   styleUrls: ['./lista-paises.component.scss']
 })
 export class ListaPaisesComponent implements OnInit {
-  @Input() onPais = new EventEmitter<string>();
+  @Input() onPais:string = "";
  
   constructor() { }
 
