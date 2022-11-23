@@ -6,6 +6,7 @@ import { Component, EventEmitter, Input, OnInit } from '@angular/core';
   styleUrls: ['./lista-paises.component.scss']
 })
 export class ListaPaisesComponent implements OnInit {
+<<<<<<< Updated upstream
   
   selectedObject : paises | undefined;
 
@@ -15,12 +16,24 @@ export class ListaPaisesComponent implements OnInit {
     {id: '3', name: 'Bolivia'},
     {id: '4', name: 'Delft'}
   ]
+=======
+  filterData(): any[] {
+    throw new Error('Method not implemented.');
+  }
+  @Input() onPais = new EventEmitter<string>();
+
+  public paises: any[] = this.filterData();
+ 
+>>>>>>> Stashed changes
  
   constructor() { }
 
   ngOnInit(): void {
+
+    
   }
 
+<<<<<<< Updated upstream
 
 
   saveAll(){
@@ -34,4 +47,12 @@ export class ListaPaisesComponent implements OnInit {
 interface paises{
   id:string;
   name:string;
+=======
+  saveData() {
+   
+  }
+
+  
+
+>>>>>>> Stashed changes
 }

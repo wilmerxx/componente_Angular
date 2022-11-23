@@ -13,6 +13,7 @@
  
 <h2>Componente de actividad</h2>
 
+<<<<<<< Updated upstream
 <app-lista-paises #lista></app-lista-paises>
 
 <button (click)="lista;">Imprimir</button>
@@ -22,4 +23,12 @@
 <label for="">Impresos de paises</label>
 <app-print-pais></app-print-pais>
 
+=======
+<label for="">Pais impreso: </label>
+<app-print-pais></app-print-pais>
+<app-lista-paises #lista></app-lista-paises>
+
+
+<button class="save-all-button" (click)="lista.saveData();">GUARDAR TODAS</button>
+>>>>>>> Stashed changes
 
